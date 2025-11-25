@@ -1,17 +1,16 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
+
+const PLAYER_NAME = "Madrigal";
 
 document.querySelector('#app').innerHTML = `
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
+    <h1>Hello, ${PLAYER_NAME}!</h1>
+    <div class="player-card">
+      <label id="hero-name"></label>
+      <input id="hero-name-input" type="text">
+    </div>
+    <p>The hero announces his presence to the world.</p>
     <div class="card">
       <button id="counter" type="button"></button>
     </div>
@@ -20,5 +19,4 @@ document.querySelector('#app').innerHTML = `
     </p>
   </div>
 `
-
 setupCounter(document.querySelector('#counter'))
